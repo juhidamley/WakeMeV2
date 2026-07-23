@@ -8,15 +8,10 @@ let package = Package(
         .watchOS(.v10)
     ],
     products: [
-        .library(
-            name: "WakemeShared",
-            targets: ["WakemeShared"]
-        ),
+        .library(name: "WakemeShared", targets: ["WakemeShared"])
     ],
     targets: [
-        .target(
-            name: "WakemeShared",
-            path: "Sources/WakemeShared"
-        ),
+        .target(name: "WakemeShared"),
+        .testTarget(name: "WakemeSharedTests", dependencies: ["WakemeShared"])
     ]
 )

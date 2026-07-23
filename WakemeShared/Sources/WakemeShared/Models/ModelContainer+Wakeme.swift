@@ -8,7 +8,8 @@ public extension ModelContainer {
             SignalSnapshot.self,
             MonitoringSession.self,
             ModelVersion.self,
-            FalseNegativeReport.self
+            FalseNegativeReport.self,
+            DrivingDrowsinessSample.self
         ])
         let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         return try ModelContainer(for: schema, configurations: [config])
@@ -22,7 +23,8 @@ public extension ModelContainer {
             SignalSnapshot.self,
             MonitoringSession.self,
             ModelVersion.self,
-            FalseNegativeReport.self
+            FalseNegativeReport.self,
+            DrivingDrowsinessSample.self
         ])
         let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
         return try ModelContainer(for: schema, configurations: [config])
